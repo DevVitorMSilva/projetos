@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container { 
+    width: 30rem;
+    height: 42rem;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.divVisor {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divVisor input {
+    width: 25rem;
+    height: 4rem;
+    border: solid 2px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.containerBtns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 10px;
+    width: 85%;
+    height: 30rem;
+    margin: 0 auto;
+}
+
+.containerBtns button {
+    height: 5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.botaoMaior {
+    grid-column: span 2; 
+}
+
+.btnLaranja {
+    background-color: #FF9F0A;
+    color: white;
+}
+
+.btnCinzaClaro {
+    background-color: #A5A5A5;
+    color: black;
+}
+
+.btnCinzaEscuro {
+    background-color: #333333;
+    color: white;
+}

@@ -1,0 +1,68 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: monospace;
+}
+
+.container {
+    text-align: center;
+    margin: 40px auto;
+    padding: 2rem;
+    width: 35rem;
+    min-height: 20rem;
+    background-color: rgb(23, 120, 255);
+    border-radius: 25px;
+}
+
+.container h1 {
+    padding: 1rem;
+    color: white;
+}
+
+#input-tarefa {
+    padding: 0.5rem 4rem;
+    border: none;
+    border-radius: 10px;
+}
+
+#botao {
+    padding: 0.5rem 2rem; 
+    background-color: #D2691E;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+#tarefas {
+    width: 85% ;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    padding: 0.3rem;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95vw;
+    }    
+
+    #input-tarefa {
+        height: 2.5rem;
+    }
+
+    #botao {
+        margin-top: 1rem;
+        width: 12rem;
+        height: 2.5rem;
+    }
+    
+}

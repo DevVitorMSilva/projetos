@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(255, 159, 10, 1);'><path d='M6 22h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2zm3-3H7v-2h2v2zm0-4H7v-2h2v2zm0-4H7V9h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V9h2v2zm4 8h-2v-6h2v6zm0-8h-2V9h2v2zM6 4h12v3H6V4z'></path></svg>">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="divVisor">
+            <form action="">
+                <input type="text" id="visor" placeholder="0" disabled="disabled">
+            </form>
+        </div>
+        <div class="containerBtns">
+            <button class="botaoMaior btnCinzaClaro" onclick="limpezaTotal()">C</button>
+            <button onclick="adicionar('/')" class="btnCinzaClaro">/</button>
+            <button onclick="adicionar('*')" class="btnLaranja">X</button>
+            <button onclick="adicionar('7')" class="btnCinzaEscuro">7</button>
+            <button onclick="adicionar('8')" class="btnCinzaEscuro">8</button>
+            <button onclick="adicionar('9')" class="btnCinzaEscuro">9</button>
+            <button onclick="adicionar('-')" class="btnLaranja">-</button>
+            <button onclick="adicionar('4')" class="btnCinzaEscuro">4</button>
+            <button onclick="adicionar('5')" class="btnCinzaEscuro">5</button>
+            <button onclick="adicionar('6')" class="btnCinzaEscuro">6</button>
+            <button onclick="adicionar('+')" class="btnLaranja">+</button>
+            <button onclick="adicionar('1')" class="btnCinzaEscuro">1</button>
+            <button onclick="adicionar('2')" class="btnCinzaEscuro">2</button>
+            <button onclick="adicionar('3')" class="btnCinzaEscuro">3</button>
+            <button onclick="adicionar('e')" class="btnLaranja">e</button>
+            <button class="botaoMaior btnCinzaEscuro" onclick="adicionar('0')">0</button>
+            <button onclick="adicionar('.')" class="btnCinzaEscuro">.</button>
+            <button onclick="calcular()" class="btnLaranja">=</button>
+        </div>
+        
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
