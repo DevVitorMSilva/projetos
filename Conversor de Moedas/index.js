@@ -2,20 +2,16 @@ const button = document.getElementById('conversion-button')
 const elementResult = document.getElementById('conversion-result')
 const inputAmount = document.getElementById('amount')
 
+// Formata o valor do input
 inputAmount.addEventListener('input', function() {
     let value = this.value.replace(/\D/g, '')
     value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.')
     this.value = value
 })
 
-function Concatenate(a, b) {
-    let concatenateResult = (a + "-" + b)
-    return concatenateResult
-}
-
+// Calcula o resultado da conversão
 function Calculate(bid, amount) {
-    let exchangeResult = (bid * amount)
-    return exchangeResult
+    return bid * amount
 }
 
 button.addEventListener('click', () => {
@@ -23,7 +19,7 @@ button.addEventListener('click', () => {
     inputAmount.value = ""
     const currency1 = document.getElementById("currency-1").value
     const currency2 = document.getElementById("currency-2").value
-    let exchangeCurrency = Concatenate(currency1, currency2)
+    let exchangeCurrency = (`${currency1}-${currency2}`)
     axios.get(`https://economia.awesomeapi.com.br/json/last/${exchangeCurrency}`)
         .then(response => {
             const data = response.data;
