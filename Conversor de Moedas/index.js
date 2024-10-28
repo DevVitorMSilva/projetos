@@ -3,7 +3,7 @@ const elementResult = document.getElementById('conversion-result')
 const inputAmount = document.getElementById('amount')
 
 // Formata o valor do input
-inputAmount.addEventListener('input', function() {
+inputAmount.addEventListener('input', function () {
     let value = this.value.replace(/\D/g, '')
     value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.')
     this.value = value
@@ -26,7 +26,13 @@ button.addEventListener('click', () => {
             const currencyKey = Object.keys(data)[0]
             const bid = parseFloat(data[currencyKey].bid)
             let conversionCalculate = Calculate(bid, amount)
-            elementResult.innerHTML = conversionCalculate.toFixed(2)
+            var value = (conversionCalculate).toLocaleString(
+                undefined,
+                { minimumFractionDigits: 2 }
+            )
+            console.log(value);
+            elementResult.innerHTML = value
+
         })
         .catch(function (error) {
             elementResult.innerHTML = ('Erro ao fazer a requisição')
