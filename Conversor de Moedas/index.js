@@ -30,7 +30,6 @@ button.addEventListener('click', () => {
                 undefined,
                 { minimumFractionDigits: 2 }
             )
-            console.log(value);
             elementResult.innerHTML = value
 
         })
